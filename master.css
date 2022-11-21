@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: orange;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panda {
+  width: 200px;
+  height: 140px;
+  background-color: white;
+  border-radius: 85px 85px 50px 50px;
+  position: relative;
+}
+.panda::before {
+  content: "";
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  background-color: black;
+  left: -25px;
+  border-radius: 95px 95px 65px 65px;
+  top: -25px;
+  transform: rotate(-40deg);
+  z-index: -1;
+}
+.panda::after {
+  content: "";
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  background-color: black;
+  right: -25px;
+  border-radius: 95px 95px 65px 65px;
+  top: -25px;
+  transform: rotate(40deg);
+  z-index: -1;
+}
+.eye {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  left: 25px;
+  top: 36px;
+  border-radius: 30px 40px;
+  transform: rotate(70deg);
+}
+.eye::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  left: 22px;
+  top: 15px;
+}
+.eye-two {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  right: 25px;
+  top: 36px;
+  border-radius: 40px 30px;
+  transform: rotate(-70deg);
+}
+.eye-two::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  right: 22px;
+  top: 15px;
+}
+.mouth {
+  width: 0px;
+  height: 0px;
+  background-color: black;
+  position: absolute;
+  left: 50%;
+  top: 85px;
+  transform: translatex(-50%);
+  border-width: 15px;
+  border-style: solid;
+  border-color: black white white white;
+}
